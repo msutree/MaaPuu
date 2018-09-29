@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/white"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+        <TextView
+            android:id="@+id/txt_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:textColor="@color/text_33"
+            android:text="渼树光谷国际广场店"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@mipmap/dianpu"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@mipmap/lianximaijia"
+            android:drawablePadding="5dp"
+            android:text="联系卖家"
+            android:textSize="11sp"
+            android:textColor="@color/text_33"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_goods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

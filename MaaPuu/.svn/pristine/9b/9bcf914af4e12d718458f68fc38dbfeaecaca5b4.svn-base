@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_vertical"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/gmc_zd_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:src="@mipmap/zhiding"/>
+
+    <TextView
+        android:id="@+id/gmc_project_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:lines="2"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        tools:text="茶花籽滋润洗发露"
+        android:textSize="13sp"
+        android:textColor="@color/text_33"/>
+
+    <TextView
+        android:id="@+id/gmc_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginLeft="15dp"
+        tools:text="距结束15:30:00"
+        android:textSize="11sp"
+        android:textColor="@color/text_99"/>
+
+</LinearLayout>

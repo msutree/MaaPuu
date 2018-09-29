@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/top" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_weight="1"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/order_no_tv"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="订单编号："
+                android:textColor="@color/text_33"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="评价详情"
+                android:textColor="@color/text_99"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="客户姓名"
+                    android:textColor="@color/text_33"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/nick_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    tools:text="王智勇"
+                    android:textColor="@color/text_33"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="申请时间"
+                    android:textColor="@color/text_33"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/apply_date_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    tools:text="2018-3-22"
+                    android:textColor="@color/text_33"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="描述相符"
+                        android:textColor="@color/text_33"
+                        android:textSize="12sp" />
+
+                    <com.willy.ratingbar.ScaleRatingBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/rating_bar1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:srb_clearRatingEnabled="true"
+                        app:srb_clickable="false"
+                        app:srb_drawableEmpty="@mipmap/xingxingdakong"
+                        app:srb_drawableFilled="@mipmap/xingxingdashi"
+                        app:srb_isIndicator="true"
+                        app:srb_numStars="5"
+                        app:srb_scrollable="true"
+                        app:srb_starHeight="10dp"
+                        app:srb_starPadding="5dp"
+                        app:srb_starWidth="10dp"
+                        app:srb_stepSize="0.5"></com.willy.ratingbar.ScaleRatingBar>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="物流服务"
+                        android:textColor="@color/text_33"
+                        android:textSize="12sp" />
+
+                    <com.willy.ratingbar.ScaleRatingBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/rating_bar2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:srb_clearRatingEnabled="true"
+                        app:srb_clickable="false"
+                        app:srb_drawableEmpty="@mipmap/xingxingdakong"
+                        app:srb_drawableFilled="@mipmap/xingxingdashi"
+                        app:srb_isIndicator="true"
+                        app:srb_numStars="5"
+                        app:srb_scrollable="true"
+                        app:srb_starHeight="10dp"
+                        app:srb_starPadding="5dp"
+                        app:srb_starWidth="10dp"
+                        app:srb_stepSize="0.5"></com.willy.ratingbar.ScaleRatingBar>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="服务态度"
+                        android:textColor="@color/text_33"
+                        android:textSize="12sp" />
+
+                    <com.willy.ratingbar.ScaleRatingBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/rating_bar3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:srb_clearRatingEnabled="true"
+                        app:srb_clickable="false"
+                        app:srb_drawableEmpty="@mipmap/xingxingdakong"
+                        app:srb_drawableFilled="@mipmap/xingxingdashi"
+                        app:srb_isIndicator="true"
+                        app:srb_numStars="5"
+                        app:srb_scrollable="true"
+                        app:srb_starHeight="10dp"
+                        app:srb_starPadding="5dp"
+                        app:srb_starWidth="10dp"
+                        app:srb_stepSize="0.5"></com.willy.ratingbar.ScaleRatingBar>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="评价详情"
+                android:textColor="@color/text_99"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/comment_desc_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:minHeight="40dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                tools:text="暂时不想做了，下次想做的时候再做吧。"
+                android:textColor="@color/text_99"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="12dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

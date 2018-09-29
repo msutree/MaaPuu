@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aitsuki.swipe.SwipeItemLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/right_menu_1"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="@color/bg_green"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/right_menu_2"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="@color/bg_red"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/shop_item_job_set"/>
+
+</com.aitsuki.swipe.SwipeItemLayout>

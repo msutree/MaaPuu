@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:background="@color/background">
+
+        <TextView
+            android:id="@+id/srv_begin_time_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="20:35"
+            android:textSize="11sp"
+            android:textColor="@color/text_33"/>
+
+        <TextView
+            android:id="@+id/srv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="洗发"
+            android:textSize="13sp"
+            android:textColor="@color/text_33"/>
+
+        <TextView
+            android:id="@+id/srv_charge"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:maxLines="1"
+            android:text="+15.00"
+            android:textSize="13sp"
+            android:textColor="@color/text_33"/>
+
+    </LinearLayout>
+
+</LinearLayout>

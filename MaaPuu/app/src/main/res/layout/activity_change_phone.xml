@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+    <include layout="@layout/top"/>
+    <TextView
+        android:id="@+id/txt_bind_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前绑定手机号********"
+        android:padding="10dp"
+        android:textColor="@color/text_66"/>
+    <EditText
+        android:id="@+id/et_old_phone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:singleLine="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center_vertical"
+        android:hint="请输入当前绑定的完整手机号"
+        android:textColorHint="@color/text_99"
+        android:textColor="@color/text_33"
+        android:textSize="14sp"
+        android:maxLength="11"
+        android:inputType="number" />
+    <TextView
+        android:id="@+id/txt_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_btn"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:text="下一步"
+        android:gravity="center"/>
+</LinearLayout>

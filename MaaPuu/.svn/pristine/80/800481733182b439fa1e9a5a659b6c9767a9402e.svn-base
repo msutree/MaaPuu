@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+    <LinearLayout
+        android:id="@+id/ll_has_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:src="@mipmap/sousuwuneironghongbaiye"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="没有找到符合条件的内容"
+            android:layout_marginTop="20dp"
+            android:textSize="13sp"
+            android:textColor="@color/text_66"/>
+    </LinearLayout>
+    <com.maapuu.mereca.view.WanRecycleView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+    </com.maapuu.mereca.view.WanRecycleView>
+</LinearLayout>

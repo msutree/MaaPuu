@@ -1,0 +1,1 @@
+include ':app', ':simpleHUD', ':alertview', ':PushSDK', ':page', ':wx', ':silicompressor'

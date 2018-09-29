@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.maapuu.mereca.view.CircleImgView
+            android:id="@+id/avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/morentouxiang" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingRight="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nick_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:maxLines="1"
+                    android:text="张大山"
+                    android:textColor="@color/text_33"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"/>
+
+                <LinearLayout
+                    android:id="@+id/c_tag_lt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:background="@drawable/bg_solid_black_grey_radius20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/c_tag_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="3dp"
+                        android:text="&#xe699;"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/c_tag_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="预约"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pay_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:text="最后消费时间 2017/01/01 17:30"
+                android:textColor="@color/text_99"
+                android:textSize="9sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/c_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:text="&#xe696;"
+            android:textColor="@color/text_99"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/c_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:text="&#xe698;"
+            android:textColor="@color/text_99"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

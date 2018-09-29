@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include layout="@layout/top"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="33dp"
+                    android:gravity="center_horizontal"
+                    android:background="@mipmap/em_cancel_service"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="65dp"
+                        android:text="取消服务"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_99"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="100dp"
+                        android:text="宇宙第一烫染套餐"
+                        android:maxLines="1"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_33"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="¥398.00"
+                        android:maxLines="1"
+                        android:textSize="15sp"
+                        android:textColor="@color/bg_red"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:maxLines="1"
+                        android:text="服务时长：3小时"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_33"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="1"
+                        android:text="包含:洗发，剪发，烫发，吹发"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_33"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="1"
+                        android:text="刘希文"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_33"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="1"
+                        android:text="13612345678"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_33"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="121dp"
+                    android:layout_height="76dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/fuwuyijquxiao"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/bg_solid_white_stroke_33_radius15"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="回首页"
+                android:textSize="15sp"
+                android:textColor="@color/text_33"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

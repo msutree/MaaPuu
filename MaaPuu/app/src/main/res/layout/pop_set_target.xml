@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pop_target"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:text="设置目标"
+        android:textColor="#333333" />
+
+    <EditText
+        android:id="@+id/et_price"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_target_input"
+        android:singleLine="true"
+        android:hint="请输入本月目标营业额"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/text_99"
+        android:textColor="@color/text_33"
+        android:textSize="14sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#e6e6e6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="取消"
+            android:textColor="#999999" />
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:background="#e6e6e6" />
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textSize="16sp"
+            android:textColor="@color/main_color" />
+
+    </LinearLayout>
+
+</LinearLayout>

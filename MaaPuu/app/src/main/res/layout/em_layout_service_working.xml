@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp">
+
+        <com.bolex.circleprogresslibrary.CircleProgressView
+            android:id="@+id/circleProgressView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:maxProgressValue="60"
+            app:progressBackgroundWidth="4dp"
+            app:progressBackgroundColor="@color/background"
+            app:progressColor="#59AAAB"
+            app:progressHeadColor="#59AAAB"
+            app:progressHeadRadius="5dp"
+            app:progressWidth="5dp"
+            app:startupText="false" />
+
+        <TextView
+            android:id="@+id/sw_timer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingRight="8dp"
+            android:text="00:00:00"
+            android:textColor="@color/text_33"
+            android:textSize="25sp"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/sw_srv_duration_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        tools:text="本次服务不可少于40分钟"
+        android:textColor="@color/text_99"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/sw_tc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:maxLines="1"
+        tools:text="服务完成你将获得¥15元的提成"
+        android:textColor="@color/text_99"
+        android:textSize="12sp"/>
+
+</LinearLayout>

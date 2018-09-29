@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/txt_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&#xe614;"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:textColor="@color/text_33"/>
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/text_22" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical">
+            <ImageView
+                android:id="@+id/txt_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/qingchu"
+                android:layout_toLeftOf="@+id/txt_right"/>
+            <TextView
+                android:id="@+id/txt_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/sp_12"
+                android:padding="@dimen/dp_10"
+                android:textColor="@color/text_33"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/background"/>
+
+    <LinearLayout
+        android:id="@+id/ao_choose_shop_lt"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:text="选择店铺"
+            android:textColor="@color/text_33"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/choose_shop_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@mipmap/zk"
+            android:drawablePadding="10dp"
+            android:text="全部店铺"
+            android:textColor="@color/text_99"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ma_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:text="今天预约人数"
+            android:textColor="@color/text_33"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/ma_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            tools:text="6人"
+            android:textColor="@color/text_33"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/background"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

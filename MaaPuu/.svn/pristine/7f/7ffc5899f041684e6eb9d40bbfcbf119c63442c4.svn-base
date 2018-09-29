@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:background="@color/white">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="12dp"
+        app:actualImageScaleType="focusCrop"
+        app:fadeDuration="300"
+        app:failureImage="@mipmap/nopic"
+        app:failureImageScaleType="fitXY"
+        app:placeholderImage="@mipmap/morentouxiang"
+        app:roundAsCircle="true"
+        app:placeholderImageScaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/image"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_staff_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/text_33"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txt_fans_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                tools:text=""
+                android:textColor="@color/text_80"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/txt_works_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text=""
+                android:textColor="@color/text_80"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/iv_staff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/biaoqian"/>
+
+            <TextView
+                android:id="@+id/tv_post_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:maxLines="1"
+                android:background="@drawable/bg_position_label_btn"
+                android:textSize="9dp"
+                android:textColor="@color/text_99"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:text="当日预约人数"
+                    android:textColor="@color/text_33"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_wait_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    android:textColor="@color/text_33"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="人"
+                    android:textColor="@color/text_33"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_attention_status"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_solid_white_stroke_33_radius3"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="已关注"
+        android:textColor="@color/text_33"
+        android:textSize="12sp" />
+
+</RelativeLayout>

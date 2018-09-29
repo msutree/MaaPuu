@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/top" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bg_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/bg_line_1"
+            android:gravity="center"
+            android:text="岗位"
+            android:textColor="@color/text_33"
+            android:textSize="@dimen/sp_13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/bg_line" />
+
+        <TextView
+            android:id="@+id/txt_tab_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/bg_line_1"
+            android:gravity="center"
+            android:text="权限"
+            android:textColor="@color/text_33_99"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/txt_tab_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/bg_line_1"
+            android:gravity="center"
+            android:text="服务"
+            android:textColor="@color/text_33_99"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/txt_tab_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/bg_line_1"
+            android:gravity="center"
+            android:text="工资"
+            android:textColor="@color/text_33_99"
+            android:textSize="@dimen/sp_13" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bg_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/jsd_job_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/bg_line"/>
+
+                <TextView
+                    android:id="@+id/jsd_add_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@mipmap/add"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="15dp"
+                    android:text="添加"
+                    android:textColor="@color/text_33"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/jsd_delete_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@mipmap/minus2"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="15dp"
+                    android:text="删除"
+                    android:textColor="@color/text_33"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/jsd_container_fl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@color/white"
+            android:layout_weight="3">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

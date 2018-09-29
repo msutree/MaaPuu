@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+    <include layout="@layout/top"/>
+    <LinearLayout
+        android:id="@+id/ll_has"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:src="@mipmap/kabaoweikong"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="还没有会员卡"
+            android:layout_marginTop="20dp"
+            android:textSize="13sp"
+            android:textColor="@color/text_66"/>
+    </LinearLayout>
+    <com.maapuu.mereca.view.WanRecycleView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp">
+
+    </com.maapuu.mereca.view.WanRecycleView>
+</LinearLayout>

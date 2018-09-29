@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <include layout="@layout/top"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:actualImageScaleType="focusCrop"
+                app:fadeDuration="300"
+                app:failureImage="@mipmap/nopic"
+                app:failureImageScaleType="fitXY"
+                app:placeholderImage="@mipmap/morentouxiang"
+                app:placeholderImageScaleType="fitXY"
+                app:roundAsCircle="true" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/nick_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    tools:text="王乐乐"
+                    android:textColor="@color/text_33"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pay_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="1"
+                    tools:text="2010-01-01"
+                    android:textColor="@color/text_99"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/pack_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_33"
+                android:textSize="14sp"
+                tools:text="宇宙第一烫染套餐"/>
+
+            <TextView
+                android:id="@+id/recharge_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_price"
+                android:textSize="14sp"
+                tools:text="¥398.00"/>
+        </RelativeLayout>
+
+        <com.maapuu.mereca.view.MyListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="28dp"
+            android:dividerHeight="10dp"
+            android:divider="@color/white"
+            android:listSelector="@color/transparent"/>
+
+
+        <TextView
+            android:id="@+id/order_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/main_color"
+            android:textSize="14sp"
+            android:text="订单编号："/>
+    </LinearLayout>
+
+</LinearLayout>

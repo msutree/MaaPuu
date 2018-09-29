@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/top" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/background"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/txt_menu_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/bg_line_1"
+            android:gravity="center"
+            android:text="空闲"
+            android:textColor="@color/text_33_99"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/txt_menu_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/bg_line_1"
+            android:gravity="center"
+            android:text="忙碌"
+            android:textColor="@color/text_33_99"
+            android:textSize="@dimen/sp_13" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:overScrollMode="never">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

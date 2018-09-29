@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center_vertical"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/zhiding"/>
+        <TextView
+            android:id="@+id/pmc_project_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:lines="2"
+            android:gravity="center_vertical"
+            android:ellipsize="end"
+            android:text="高级染发"
+            android:textSize="13sp"
+            android:textColor="@color/text_33_99"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pmc_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:text="距结束15:30:00"
+        android:textSize="11sp"
+        android:textColor="@color/text_99"/>
+
+</LinearLayout>

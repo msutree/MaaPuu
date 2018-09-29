@@ -1,0 +1,231 @@
+package com.maapuu.mereca.background.shop.activity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Message;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.TextView;
+
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.maapuu.mereca.R;
+import com.maapuu.mereca.base.AppConfig;
+import com.maapuu.mereca.base.BaseActivity;
+import com.maapuu.mereca.bean.SrvBean;
+import com.maapuu.mereca.constant.UrlUtils;
+import com.maapuu.mereca.recycleviewutil.BaseRecyclerAdapter;
+import com.maapuu.mereca.recycleviewutil.BaseRecyclerHolder;
+import com.maapuu.mereca.recycleviewutil.FullyLinearLayoutManager;
+import com.maapuu.mereca.util.FastJsonTools;
+import com.maapuu.mereca.util.HttpModeBase;
+import com.maapuu.mereca.util.LoginUtil;
+import com.maapuu.mereca.util.PullUtil;
+import com.maapuu.mereca.util.StringUtils;
+import com.maapuu.mereca.util.ToastUtil;
+import com.maapuu.mereca.view.WanRecycleView;
+import com.luck.picture.lib.decoration.RecycleViewDivider;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.OnClick;
+
+/**
+ * 包含服务
+ * Created by Jia on 2018/3/19.
+ */
+
+public class ProjectContainServiceActivity extends BaseActivity {
+    @BindView(R.id.txt_left)
+    TextView txtLeft;
+    @BindView(R.id.txt_title)
+    TextView txtTitle;
+    @BindView(R.id.txt_right)
+    TextView txtRight;
+
+    @BindView(R.id.recycler_view)
+    WanRecycleView recyclerView;
+
+    private FullyLinearLayoutManager mLayoutManager;
+    private BaseRecyclerAdapter<SrvBean> adapter;
+    private List<SrvBean> list;
+    private String srv_ids;
+
+    @Override
+    public void initContentView(Bundle savedInstanceState) {
+        setContentView(R.layout.shop_activity_project_contain_service);
+    }
+
+    @Override
+    public void initView() {
+        txtLeft.setTypeface(StringUtils.getFont(mContext));
+        txtTitle.setText("包含服务");
+        srv_ids = getIntent().getStringExtra("srv_ids");
+
+        PullUtil.setRecycleViewLabel(recyclerView, PullToRefreshBase.Mode.BOTH);
+        mLayoutManager = new FullyLinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false);
+        recyclerView.getRefreshableView().setLayoutManager(mLayoutManager);
+        recyclerView.getRefreshableView().setHasFixedSize(true);
+        //分割线
+        recyclerView.getRefreshableView().addItemDecoration(new RecycleViewDivider(mContext, LinearLayoutManager.HORIZONTAL, 2,
+                getResources().getColor(R.color.background)));
+        list = new ArrayList<>();
+    }
+
+    @Override
+    public void initData() {
+        mHttpModeBase.xPost(HttpModeBase.HTTP_REQUESTCODE_1, UrlUtils.s_srv_sel_get(LoginUtil.getInfo("token"),LoginUtil.getInfo("uid")),true);
+    }
+
+    @Override
+    public boolean handleMessage(Message msg) {
+        switch (msg.what) {
+            case HttpModeBase.HTTP_REQUESTCODE_1:
+                try {
+                    JSONObject object = new JSONObject((String) msg.obj);
+                    if (object.optInt("status") == 1) {
+                        if (!StringUtils.isEmpty(object.optString("result"))) {
+                            list = FastJsonTools.getPersons(object.optString("result"), SrvBean.class);
+                            if(!StringUtils.isEmpty(srv_ids)){
+                                for (int i = 0; i < list.size(); i++){
+                                    for (int j = 0; j < srv_ids.split(",").length; j++){
+                                        if(list.get(i).getSrv_id().equals(srv_ids.split(",")[j])){
+                                            list.get(i).setChecked(true);
+                                        }
+                                    }
+                                }
+                            }
+                            setAdapter();
+                        }
+                    } else {
+                        ToastUtil.show(mContext, object.optString("message"));
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                break;
+            case HttpModeBase.HTTP_ERROR:
+                String result_e = (String) msg.obj;
+                ToastUtil.show(mContext, result_e);
+                break;
+        }
+        return false;
+    }
+
+    private void setAdapter() {
+        if (adapter == null) {
+            adapter = new BaseRecyclerAdapter<SrvBean>(mContext, list, R.layout.shop_item_project_contain_service) {
+                @Override
+                public void convert(BaseRecyclerHolder holder, SrvBean bean, final int position, boolean isScrolling) {
+                    CheckBox cb = holder.getView(R.id.cr_cb);
+                    holder.setText(R.id.txt_name,bean.getSrv_name());
+                    cb.setChecked(bean.isChecked());
+                    if(position == 0){
+                        holder.setImageResource(R.id.iv_up,R.mipmap.up_circle_gray);
+                        holder.setImageResource(R.id.iv_down,R.mipmap.down_circle);
+                    }else if(position == list.size()-1){
+                        holder.setImageResource(R.id.iv_up,R.mipmap.up_circle);
+                        holder.setImageResource(R.id.iv_down,R.mipmap.down_circle_gray);
+                    }else {
+                        holder.setImageResource(R.id.iv_up,R.mipmap.up_circle);
+                        holder.setImageResource(R.id.iv_down,R.mipmap.down_circle);
+                    }
+                    holder.setOnClickListener(R.id.iv_up, new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if(position != 0){
+                                SrvBean bean = list.get(position);
+                                for (int i = 0; i < list.size(); i++){
+                                    if(i == position){
+                                        list.set(position,list.get(position - 1));
+                                        list.set(position-1,bean);
+                                    }
+                                }
+                                adapter.notifyDataSetChanged();
+                            }
+                        }
+                    });
+                    holder.setOnClickListener(R.id.iv_down, new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if(position != list.size()-1){
+                                SrvBean bean = list.get(position);
+                                for (int i = 0; i < list.size(); i++){
+                                    if(i == position){
+                                        list.set(position,list.get(position + 1));
+                                        list.set(position + 1,bean);
+                                    }
+                                }
+                                adapter.notifyDataSetChanged();
+                            }
+                        }
+                    });
+                }
+            };
+            recyclerView.getRefreshableView().setAdapter(adapter);
+        } else {
+            adapter.notifyDataSetChanged();
+        }
+        adapter.setOnItemClickListener(new BaseRecyclerAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(RecyclerView parent, View view, int position) {
+                list.get(position).setChecked(!list.get(position).isChecked());
+                adapter.notifyDataSetChanged();
+
+//                UIUtils.startActivity(mContext,ServiceJobActivity.class);
+            }
+        });
+    }
+
+    @Override
+    @OnClick({R.id.txt_left,R.id.confirm_tv})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.txt_left:
+                finish();
+                break;
+            case R.id.confirm_tv:
+                if(StringUtils.isEmpty(getIds())){
+                    ToastUtil.show(mContext,"请选择服务");
+                    return;
+                }
+                it = new Intent();
+                it.putExtra("srv_ids",getIds());
+                it.putExtra("srv_names",getName());
+                setResult(AppConfig.ACTIVITY_RESULTCODE_2,it);
+                finish();
+                break;
+        }
+    }
+    private String getIds(){
+        StringBuilder sb = new StringBuilder("");
+        for (SrvBean bean:list) {
+            if(bean.isChecked()){
+                sb.append(bean.getSrv_id()+",");
+            }
+        }
+        if(sb.toString().endsWith(",")){
+            sb.deleteCharAt(sb.length()-1);
+        }
+        return sb.toString();
+    }
+    private String getName(){
+        StringBuilder sb = new StringBuilder("");
+        for (SrvBean bean:list) {
+            if(bean.isChecked()){
+                sb.append(bean.getSrv_name()+",");
+            }
+        }
+        if(sb.toString().endsWith(",")){
+            sb.deleteCharAt(sb.length()-1);
+        }
+        return sb.toString();
+    }
+
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MaaPuu.iml" filepath="$PROJECT_DIR$/MaaPuu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PushSDK/PushSDK.iml" filepath="$PROJECT_DIR$/PushSDK/PushSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alertview/alertview.iml" filepath="$PROJECT_DIR$/alertview/alertview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/page/page.iml" filepath="$PROJECT_DIR$/page/page.iml" />
+      <module fileurl="file://$PROJECT_DIR$/silicompressor/silicompressor.iml" filepath="$PROJECT_DIR$/silicompressor/silicompressor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simpleHUD/simpleHUD.iml" filepath="$PROJECT_DIR$/simpleHUD/simpleHUD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wx/wx.iml" filepath="$PROJECT_DIR$/wx/wx.iml" />
+    </modules>
+  </component>
+</project>

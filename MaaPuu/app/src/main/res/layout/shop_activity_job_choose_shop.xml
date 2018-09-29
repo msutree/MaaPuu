@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/top"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/background"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none">
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/confirm_tv"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/text_33"
+        android:gravity="center"
+        android:text="确定"
+        android:textSize="16sp"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

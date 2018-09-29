@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/top" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_weight="1"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/order_no_tv"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="订单编号："
+                android:textColor="@color/text_33"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="发货详情"
+                android:textColor="@color/text_99"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="物流单号"
+                    android:textColor="@color/text_33"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/logistics_num_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:layout_marginLeft="100dp"
+                    android:inputType="number"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:textColor="@color/text_33"
+                    android:textSize="12sp"
+                    android:textColorHint="@color/text_99"
+                    android:hint="请填写物流单号"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/logistics_company_rl"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="物流公司"
+                    android:textColor="@color/text_33"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/logistics_company_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@mipmap/youjiantou"
+                    android:textColor="@color/text_99"
+                    android:textSize="12sp"
+                    tools:text="请选择" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_no_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="用户自提"
+                android:textColor="@color/main_color"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:background="@drawable/bg_no_use"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/go_ship_tv"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="确定"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@color/black"/>
+
+</LinearLayout>

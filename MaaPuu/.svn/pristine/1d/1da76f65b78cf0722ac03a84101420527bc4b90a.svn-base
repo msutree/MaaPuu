@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/top"/>
+    <LinearLayout
+        android:id="@+id/ll_has"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:src="@mipmap/mmyddkby"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂时没有资金记录~~"
+            android:layout_marginTop="20dp"
+            android:textSize="13sp"
+            android:textColor="@color/text_66"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/month_tv"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:background="@color/background"
+        android:text="本月收入明细"
+        android:textColor="@color/text_99"
+        android:textSize="11sp"/>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnablePreviewInEditMode="false">
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ScrollView
+            android:id="@+id/refresh_sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.maapuu.mereca.view.NestedExpandableListView
+                    android:id="@+id/elv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:groupIndicator="@null"
+                    android:divider="@color/transparent"
+                    android:dividerHeight="0dp"
+                    android:childDivider="@color/transparent" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

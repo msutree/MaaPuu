@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableView">
+        <attr name="maxTextLines" format="integer"/>
+        <attr name="animDur" format="integer"/>
+        <attr name="animAlphaStart" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="absProgressBar">
+        <attr name="progress" format="integer" />
+        <attr name="backgroundColor" format="reference|color" />
+        <attr name="txtColor" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="progressBar">
+        <attr name="startFillColor" format="reference|color" />
+        <attr name="middleFillColor" format="reference|color" />
+        <attr name="endFillColor" format="reference|color" />
+        <attr name="arrowPointColor" format="reference|color" />
+        <attr name="arrowPointRadius" format="dimension|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="floatTextProgressBar">
+        <attr name="triangleColor" format="reference|color" />
+        <attr name="rectColor" format="reference|color" />
+        <attr name="fillColor" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color"/>
+        <attr name="roundProgressColor" format="color"/>
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="integer"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="PayPsdInputView">
+
+        <attr name="maxCount" format="integer" />
+        <attr name="circleColor" format="color" />
+        <attr name="bottomLineColor" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="divideLineWidth" format="dimension" />
+        <attr name="divideLineColor" format="color" />
+        <attr name="backColor" format="color" />
+        <attr name="rectAngle" format="dimension" />
+        <attr name="focusedColor" format="color"/>
+        <attr name="isPassword" format="boolean"/>
+        <attr name="txtSize" format="dimension"/>
+        <attr name="psdType" format="enum">
+            <enum name="weChat" value="0" />
+            <enum name="bottomLine" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

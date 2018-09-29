@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_vertical"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/ep_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:maxLines="1"
+        android:layout_marginLeft="10dp"
+        tools:text="高级染发"
+        android:textSize="13sp"
+        android:textColor="@color/text_33"/>
+
+    <CheckBox
+        android:id="@+id/ep_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:button="@drawable/em_circle_selector_bg"
+        android:layout_marginRight="10dp"/>
+
+</LinearLayout>

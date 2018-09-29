@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.maapuu.mereca.view.CircleImgView
+            android:id="@+id/cr_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/cr_shop_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            tools:text="武汉楚河汉界店"
+            android:textSize="15sp"
+            android:textColor="@color/text_33"
+            android:layout_marginRight="10dp"/>
+
+        <CheckBox
+            android:id="@+id/cr_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:button="@drawable/em_circle_selector_bg"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

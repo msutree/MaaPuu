@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/white"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/cr_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        tools:text="已经有其他发型师为TA服务"
+        android:maxLines="1"
+        android:textSize="15sp"
+        android:textColor="@color/text_33"/>
+
+</LinearLayout>

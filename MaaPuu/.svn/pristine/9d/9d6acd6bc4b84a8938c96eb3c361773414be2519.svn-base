@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">美仆</string>
+
+    <!--选择图片失败的提示-->
+    <string name="no_permission_sd">没有权限, 你需要去设置中开启读取手机存储权限.</string>
+    <string name="no_permission_camera">没有权限, 你需要去设置中开启相机权限.</string>
+    <string name="no_permission_call">请前往应用设置界面，开启电话权限</string>
+
+</resources>

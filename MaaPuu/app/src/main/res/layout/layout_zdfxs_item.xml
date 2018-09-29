@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:padding="12dp"
+    android:paddingRight="12dp">
+
+    <TextView
+        android:id="@+id/tv_srv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_33"
+        android:textSize="13sp"
+        tools:text="发型师" />
+
+    <TextView
+        android:id="@+id/tv_srv_staff_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:drawablePadding="5dp"
+        android:drawableRight="@mipmap/youjiantou"
+        android:gravity="center_vertical|right"
+        android:hint="请选择"
+        android:textColor="@color/text_33"
+        android:textColorHint="@color/text_99"
+        android:textSize="13sp" />
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        
+        <com.maapuu.mereca.view.CircleImgView
+            android:id="@+id/ca_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/morentouxiang"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大咖"
+                android:textSize="@dimen/sp_13"
+                android:textColor="@color/text_33"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="12月06日"
+                android:textSize="@dimen/sp_11"
+                android:textColor="@color/text_99"/>
+        </LinearLayout>
+
+        <com.willy.ratingbar.ScaleRatingBar
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/simpleRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srb_numStars="5"
+            app:srb_rating="2.5"
+            app:srb_starWidth="10dp"
+            app:srb_starHeight="10dp"
+            app:srb_starPadding="5dp"
+            app:srb_stepSize="0.5"
+            app:srb_isIndicator="true"
+            app:srb_clickable="false"
+            app:srb_scrollable="true"
+            app:srb_clearRatingEnabled="true"
+            app:srb_drawableEmpty="@mipmap/xingxingdakong"
+            app:srb_drawableFilled="@mipmap/xingxingdashi">
+        </com.willy.ratingbar.ScaleRatingBar>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="5dp"
+        android:text="每一个作品都有一个独特的故事，每个家具空间都有设计师和主任之间的灵感火花。"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/text_33"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ca_img_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="侧柏叶洗护套餐"
+            android:textSize="@dimen/sp_11"
+            android:textColor="@color/text_99"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="回复"
+            android:textSize="11sp"
+            android:textColor="@color/text_99"/>
+
+    </LinearLayout>
+
+</LinearLayout>

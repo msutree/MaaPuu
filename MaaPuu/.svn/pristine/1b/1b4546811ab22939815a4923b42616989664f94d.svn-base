@@ -1,0 +1,77 @@
+package com.maapuu.mereca.util;
+
+import com.handmark.pulltorefresh.library.ILoadingLayout;
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshGridView;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
+import com.maapuu.mereca.R;
+import com.maapuu.mereca.base.BaseApplication;
+import com.maapuu.mereca.view.WanRecycleView;
+
+/**
+ * Created by dell on 2017/7/29.
+ */
+
+public class PullUtil {
+
+    public static void setScrollViewLabel(PullToRefreshScrollView ptrScrollView, PullToRefreshBase.Mode mode){
+        ptrScrollView.setMode(mode);
+        //设置刷新时显示的文本
+        ILoadingLayout startLayout = ptrScrollView.getLoadingLayoutProxy(true,false);
+        startLayout.setLoadingDrawable(BaseApplication.getInstance().getResources().getDrawable(R.drawable.progress_loading_frame));
+        startLayout.setPullLabel("下拉刷新");
+        startLayout.setRefreshingLabel("正在刷新...");
+        startLayout.setReleaseLabel("释放立即刷新");
+        ILoadingLayout endLayout = ptrScrollView.getLoadingLayoutProxy(false,true);
+        endLayout.setLoadingDrawable(BaseApplication.getInstance().getResources().getDrawable(R.drawable.progress_loading_frame));
+        endLayout.setPullLabel("上拉加载");
+        endLayout.setRefreshingLabel("正在加载...");
+        endLayout.setReleaseLabel("释放立即加载");
+    }
+
+    public static void setListViewLabel(PullToRefreshListView ptrListView, PullToRefreshBase.Mode mode){
+        ptrListView.setMode(mode);
+        //设置刷新时显示的文本
+        ILoadingLayout startLayout = ptrListView.getLoadingLayoutProxy(true,false);
+        startLayout.setLoadingDrawable(BaseApplication.getInstance().getResources().getDrawable(R.drawable.progress_loading_frame));
+        startLayout.setPullLabel("下拉刷新");
+        startLayout.setRefreshingLabel("正在刷新...");
+        startLayout.setReleaseLabel("释放立即刷新");
+        ILoadingLayout endLayout = ptrListView.getLoadingLayoutProxy(false,true);
+        endLayout.setLoadingDrawable(BaseApplication.getInstance().getResources().getDrawable(R.drawable.progress_loading_frame));
+        endLayout.setPullLabel("上拉加载");
+        endLayout.setRefreshingLabel("正在加载...");
+        endLayout.setReleaseLabel("释放立即加载");
+    }
+
+    public static void setRecycleViewLabel(WanRecycleView recycleView, PullToRefreshBase.Mode mode){
+        recycleView.setMode(mode);
+        //设置刷新时显示的文本
+        ILoadingLayout startLayout = recycleView.getLoadingLayoutProxy(true,false);
+        startLayout.setLoadingDrawable(BaseApplication.getInstance().getResources().getDrawable(R.drawable.progress_loading_frame));
+        startLayout.setPullLabel("下拉刷新");
+        startLayout.setRefreshingLabel("正在刷新...");
+        startLayout.setReleaseLabel("释放立即刷新");
+        ILoadingLayout endLayout = recycleView.getLoadingLayoutProxy(false,true);
+        endLayout.setLoadingDrawable(BaseApplication.getInstance().getResources().getDrawable(R.drawable.progress_loading_frame));
+        endLayout.setPullLabel("上拉加载");
+        endLayout.setRefreshingLabel("正在加载...");
+        endLayout.setReleaseLabel("释放立即加载");
+    }
+
+    public static void setGridViewLabel(PullToRefreshGridView ptrGridView, PullToRefreshBase.Mode mode){
+        ptrGridView.setMode(mode);
+        //设置刷新时显示的文本
+        ILoadingLayout startLayout = ptrGridView.getLoadingLayoutProxy(true,false);
+        startLayout.setLoadingDrawable(BaseApplication.getInstance().getResources().getDrawable(R.drawable.progress_loading_frame));
+        startLayout.setPullLabel("下拉刷新");
+        startLayout.setRefreshingLabel("正在刷新...");
+        startLayout.setReleaseLabel("释放立即刷新");
+        ILoadingLayout endLayout = ptrGridView.getLoadingLayoutProxy(false,true);
+        endLayout.setLoadingDrawable(BaseApplication.getInstance().getResources().getDrawable(R.drawable.progress_loading_frame));
+        endLayout.setPullLabel("上拉加载");
+        endLayout.setRefreshingLabel("正在加载...");
+        endLayout.setReleaseLabel("释放立即加载");
+    }
+}

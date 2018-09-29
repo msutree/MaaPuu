@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <include layout="@layout/top"/>
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/ptr_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_shop"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="12dp"
+                    app:actualImageScaleType="focusCrop"
+                    app:fadeDuration="300"
+                    app:failureImage="@mipmap/nopic"
+                    app:failureImageScaleType="center"
+                    app:placeholderImageScaleType="fitXY"
+                    app:roundAsCircle="true" />
+                <TextView
+                    android:id="@+id/txt_shop_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/text_33"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+                <TextView
+                    android:id="@+id/txt_change_shop"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    android:text="切换门店"
+                    android:layout_marginRight="12dp"
+                    android:gravity="center"
+                    android:textColor="@color/text_33"
+                    android:textSize="12sp"
+                    android:background="@drawable/bg_solid_white_stroke_33_radius3"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/txt_year_card"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableBottom="@drawable/bg_line_1"
+                    android:gravity="center"
+                    android:text="会籍"
+                    android:textColor="@color/text_33_99"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:id="@+id/txt_project_card"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableBottom="@drawable/bg_line_1"
+                    android:gravity="center"
+                    android:text="项目卡"
+                    android:textColor="@color/text_33_99"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:id="@+id/txt_charge_card"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableBottom="@drawable/bg_line_1"
+                    android:gravity="center"
+                    android:text="充值卡"
+                    android:textColor="@color/text_33_99"
+                    android:textSize="@dimen/sp_13" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/ll_has"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="120dp"
+                        android:src="@mipmap/kabaoweikong"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="还没有会员卡"
+                        android:layout_marginTop="20dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_66"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</LinearLayout>

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "F:\\Android\\workspace2\\MaaPuu\\simpleHUD\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\simplehud_success.png",
+        "source": "F:\\Android\\workspace2\\MaaPuu\\simpleHUD\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\simplehud_success.png"
+    },
+    {
+        "merged": "F:\\Android\\workspace2\\MaaPuu\\simpleHUD\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\simplehud_error.png",
+        "source": "F:\\Android\\workspace2\\MaaPuu\\simpleHUD\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\simplehud_error.png"
+    },
+    {
+        "merged": "F:\\Android\\workspace2\\MaaPuu\\simpleHUD\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\simplehud_bg.xml",
+        "source": "F:\\Android\\workspace2\\MaaPuu\\simpleHUD\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\simplehud_bg.xml"
+    },
+    {
+        "merged": "F:\\Android\\workspace2\\MaaPuu\\simpleHUD\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\simplehud_info.png",
+        "source": "F:\\Android\\workspace2\\MaaPuu\\simpleHUD\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\simplehud_info.png"
+    },
+    {
+        "merged": "F:\\Android\\workspace2\\MaaPuu\\simpleHUD\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\progress_anim_frame.xml",
+        "source": "F:\\Android\\workspace2\\MaaPuu\\simpleHUD\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\progress_anim_frame.xml"
+    }
+]

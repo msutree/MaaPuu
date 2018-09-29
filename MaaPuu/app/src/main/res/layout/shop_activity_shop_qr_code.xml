@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/top"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/background"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/white">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_shop"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            app:actualImageScaleType="focusCrop"
+            app:fadeDuration="300"
+            app:failureImage="@mipmap/nopic"
+            app:failureImageScaleType="fitXY"
+            app:placeholderImageScaleType="fitXY"
+            app:roundAsCircle="true" />
+        <TextView
+            android:id="@+id/txt_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="25dp"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/text_33"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/txt_fans_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="58dp"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/text_99"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/shop_qr_code_iv"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:scaleType="fitXY"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:layout_marginBottom="25dp"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/nd_white_round_corner_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/nd_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="17sp"
+        tools:text="设置目标"
+        android:textColor="@color/text_33" />
+
+    <EditText
+        android:id="@+id/nd_content_et"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:inputType="text"
+        android:hint="请在此输入"
+        android:textSize="15sp"
+        android:textColorHint="@color/text_99"
+        android:textColor="@color/text_33"
+        android:background="@drawable/bg_solid_bg_radius3"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#e6e6e6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/nd_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="取消"
+            android:textColor="@color/text_99" />
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:background="#e6e6e6" />
+
+        <TextView
+            android:id="@+id/nd_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textSize="16sp"
+            android:textColor="@color/main_color" />
+
+    </LinearLayout>
+
+</LinearLayout>

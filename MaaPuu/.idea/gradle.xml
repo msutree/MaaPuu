@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="$APPLICATION_HOME_DIR$/gradle/gradle-4.4" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/PushSDK" />
+            <option value="$PROJECT_DIR$/alertview" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/page" />
+            <option value="$PROJECT_DIR$/silicompressor" />
+            <option value="$PROJECT_DIR$/simpleHUD" />
+            <option value="$PROJECT_DIR$/wx" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

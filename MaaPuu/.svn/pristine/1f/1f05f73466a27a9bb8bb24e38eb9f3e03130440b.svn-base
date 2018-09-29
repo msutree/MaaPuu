@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/top"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/background"/>
+
+    <TextView
+        android:id="@+id/fm_account_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:background="@color/background"
+        android:gravity="center_vertical"
+        android:text="明细"
+        android:textColor="@color/text_99"
+        android:textSize="14sp"/>
+
+    <com.maapuu.mereca.view.WanRecycleView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+    </com.maapuu.mereca.view.WanRecycleView>
+
+</LinearLayout>

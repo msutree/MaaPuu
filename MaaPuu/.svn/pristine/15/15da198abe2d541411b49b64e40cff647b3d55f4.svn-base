@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/txt_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="&#xe614;"
+            android:textColor="@color/text_33"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="@color/text_22"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_10"
+            android:text="&#xe67d;"
+            android:textColor="@color/text_33"
+            android:textSize="@dimen/sp_17" />
+
+        <TextView
+            android:id="@+id/txt_right2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/txt_right"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:text="&#xe69a;"
+            android:textColor="@color/text_33"
+            android:textSize="@dimen/sp_17" />
+        <ImageView
+            android:id="@+id/txt_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/txt_right2"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/qingchu"/>
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/refresh_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@mipmap/em_total_income_head_bg">
+
+                <LinearLayout
+                    android:id="@+id/choose_shop_lt"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:text="选择店铺"
+                        android:textColor="@color/text_99"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/choose_shop_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:drawableRight="@mipmap/arrow_down_white"
+                        android:drawablePadding="10dp"
+                        android:text="全部店铺"
+                        android:textColor="@color/text_99"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="60dp"
+                    android:text="账户金额"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_99"/>
+
+                <TextView
+                    android:id="@+id/txt_yue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="85dp"
+                    android:text="0.00"
+                    android:textSize="22sp"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/fm_withdraw_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:text="提现"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/fm_account_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:background="@color/background"
+                android:gravity="center_vertical"
+                android:text="明细"
+                android:textColor="@color/text_99"
+                android:textSize="14sp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"/>
+
+        </LinearLayout>
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:layout_marginTop="5dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <EditText
+            android:id="@+id/my_txt_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="请输入内容"
+            android:textColorHint="#999999"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:lineSpacingExtra="3dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="top"
+            android:paddingTop="10dp"
+            android:background="@null"/>
+
+        <ImageView
+            android:id="@+id/my_txt_delete_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/shanchuda"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="5dp"
+            android:paddingRight="10dp"/>
+
+    </FrameLayout>
+
+</LinearLayout>

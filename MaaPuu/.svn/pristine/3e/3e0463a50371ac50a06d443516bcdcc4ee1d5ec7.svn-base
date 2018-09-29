@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="75dp"
+    android:layout_height="26dp"
+    android:minWidth="32dp"
+    android:layout_marginRight="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:gravity="center"
+    android:background="@drawable/bg_pop_tag_text_selector"
+    android:textColor="@color/text_pop_tag_order_manage"
+    android:text="标签"
+    android:maxLines="1"
+    android:ellipsize="end"
+    android:textSize="11sp">
+</TextView>

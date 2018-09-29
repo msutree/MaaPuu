@@ -1,0 +1,60 @@
+package com.maapuu.mereca.activity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
+import com.maapuu.mereca.R;
+import com.maapuu.mereca.base.BaseActivity;
+import com.maapuu.mereca.util.StringUtils;
+import com.maapuu.mereca.util.VersionUtil;
+
+import java.util.Calendar;
+
+import butterknife.BindView;
+import butterknife.OnClick;
+
+/**
+ * Created by dell on 2018/3/1.
+ */
+
+public class AboutUsActivity extends BaseActivity {
+    @BindView(R.id.txt_left)
+    TextView txtLeft;
+    @BindView(R.id.txt_title)
+    TextView txtTitle;
+    @BindView(R.id.txt_version)
+    TextView txtVersion;
+    @BindView(R.id.txt_website)
+    TextView txtWebsite;
+
+    @Override
+    public void initContentView(Bundle savedInstanceState) {
+        setContentView(R.layout.activity_about_us);
+    }
+
+    @Override
+    public void initView() {
+        txtLeft.setTypeface(StringUtils.getFont(mContext));
+        txtTitle.setText("关于我们");
+        txtVersion.setText("V"+ VersionUtil.getAppVersionName());
+        Calendar date = Calendar.getInstance();
+        String year = String.valueOf(date.get(Calendar.YEAR));
+        txtWebsite.setText("Copyright  © 2017-"+year);
+    }
+
+    @Override
+    public void initData() {
+
+    }
+
+    @Override
+    @OnClick({R.id.txt_left})
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.txt_left:
+                finish();
+                break;
+        }
+    }
+}
